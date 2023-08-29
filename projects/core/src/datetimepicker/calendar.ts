@@ -68,7 +68,7 @@ export type MatCalendarView = 'clock' | 'month' | 'year' | 'multi-year';
 export class MatDatetimepickerCalendarComponent<D>
   implements AfterContentInit, OnDestroy
 {
-  @Output() _userSelection = new EventEmitter<void>();
+  @Output() closeDateTimePicker = new EventEmitter<any>();
   /** Active multi year view when click on year. */
   @Input() multiYearSelector: boolean = false;
   /** Whether the calendar should be started in month or year view. */
@@ -84,6 +84,8 @@ export class MatDatetimepickerCalendarComponent<D>
   @Input() ariaPrevYearLabel = 'Previous year';
   @Input() ariaNextMultiYearLabel = 'Next year range';
   @Input() ariaPrevMultiYearLabel = 'Previous year range';
+  @Input() confirmLabel: string = 'Ok';
+  @Input() cancelLabel: string = 'Cancel';
   /** Prevent user to select same date time */
   @Input() preventSameDateTimeSelection = false;
   /** Emits when the currently selected date changes. */
@@ -275,7 +277,7 @@ export class MatDatetimepickerCalendarComponent<D>
 
   get _hoursLabel(): string {
     let hour = this._adapter.getHour(this._activeDate);
-    if (!!this.twelvehour) {
+    if (this.twelvehour) {
       if (hour === 0) {
         hour = 24;
       }
@@ -325,8 +327,12 @@ export class MatDatetimepickerCalendarComponent<D>
     );
   };
 
-  _userSelected(): void {
-    this._userSelection.emit();
+  onCancel(): void {
+    this.closeDateTimePicker.emit(null);
+  }
+
+  onConfirm(): void {
+    this.closeDateTimePicker.emit(this._activeDate);
   }
 
   ngAfterContentInit() {
@@ -420,7 +426,7 @@ export class MatDatetimepickerCalendarComponent<D>
   }
 
   _updateDate(date: D): D {
-    if (!!this.twelvehour) {
+    if (this.twelvehour) {
       const HOUR = this._adapter.getHour(date);
       if (HOUR === 12) {
         if (this._AMPM === 'AM') {

@@ -1,9 +1,9 @@
 {
-  "name": "@mat-datetimepicker/core",
-  "version": "10.0.10",
+  "name": "cus-mat-datetimepicker/core",
+  "version": "10.2.4",
+  "license": "UNLICENSED",
   "repository": "https://github.com/kuhnroyal/mat-datetimepicker.git",
-  "author": "PL <kuhnroyal@gmail.com>",
-  "license": "MIT",
+  "author": "PL <kuhnroyal@gmail.com>, extended by PL <shivashankar0601@gmail.com>",
   "exports": {
     "./datetimepicker/datetimepicker-theme": {
       "sass": "datetimepicker/datetimepicker-theme.scss"

@@ -69,13 +69,28 @@ export class MatDatetimepickerContentComponent<D> implements AfterContentInit {
   @ViewChild(MatDatetimepickerCalendarComponent, { static: true })
   _calendar: MatDatetimepickerCalendarComponent<D>;
 
+  changedDate: D = null;
+
   ngAfterContentInit() {
     this._calendar._focusActiveCell();
   }
 
   onSelectionChange(date: D) {
+    this.changedDate = date;
+  }
+
+  onSelectionConfirm(date: D) {
     this.datetimepicker._select(date);
-    this.datetimepicker.close();
+  }
+
+  handleClose(val: any) {
+    let newValue = this.changedDate ?? val;
+    if ((val && this.changedDate) || val) {
+      this.onSelectionConfirm(newValue);
+      this.datetimepicker.close();
+      this.changedDate = null;
+    } else if (val === null && this.changedDate === null)
+      this.datetimepicker.close();
   }
 
   /**
@@ -112,6 +127,8 @@ export class MatDatetimepickerComponent<D> implements OnDestroy {
   @Input() ariaPrevMonthLabel = 'Previous month';
   @Input() ariaNextYearLabel = 'Next year';
   @Input() ariaPrevYearLabel = 'Previous year';
+  @Input() confirmLabel: string = 'Ok';
+  @Input() cancelLabel: string = 'Cancel';
   /** Prevent user to select same date time */
   @Input() preventSameDateTimeSelection = false;
   /**

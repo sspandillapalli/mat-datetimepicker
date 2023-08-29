@@ -1,5 +1,5 @@
 <mat-datetimepicker-calendar
-  (_userSelection)="datetimepicker.close()"
+  (closeDateTimePicker)="handleClose($event)"
   (selectedChange)="onSelectionChange($event)"
   (viewChanged)="datetimepicker._viewChanged($event)"
   [ariaNextMonthLabel]="datetimepicker.ariaNextMonthLabel"
@@ -19,6 +19,8 @@
   [timeInterval]="datetimepicker.timeInterval"
   [twelvehour]="datetimepicker.twelvehour"
   [type]="datetimepicker.type"
+  [cancelLabel]="datetimepicker.cancelLabel"
+  [confirmLabel]="datetimepicker.confirmLabel"
   cdkTrapFocus
   class="mat-typography"
 >

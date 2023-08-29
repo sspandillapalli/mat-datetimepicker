@@ -186,3 +186,16 @@ $mat-calendar-next-icon-transform: translateX(-2px) rotate(45deg);
     }
   }
 }
+
+.action-buttons {
+  margin: 10px 0px;
+  position: sticky;
+  float: right;
+  right: 0px;
+  bottom: 0px;
+}
+
+.cancel-button,
+.confirm-button {
+  margin: 0 10px 0 10px !important;
+}

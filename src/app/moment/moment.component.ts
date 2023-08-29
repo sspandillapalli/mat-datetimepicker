@@ -9,8 +9,8 @@ import {
   DatetimeAdapter,
   MAT_DATETIME_FORMATS,
   MatDatetimepickerFilterType,
-} from '@mat-datetimepicker/core';
-import { MomentDatetimeAdapter } from '@mat-datetimepicker/moment';
+} from 'cus-mat-datetimepicker/core';
+import { MomentDatetimeAdapter } from 'cus-mat-datetimepicker/moment';
 import { Moment, utc } from 'moment/moment';
 
 @Component({

@@ -99,7 +99,7 @@
     </div>
   </div>
   <mat-datetimepicker-month-view
-    (_userSelection)="_userSelected()"
+    (_userSelection)="onCancel()"
     (selectedChange)="_dateSelected($event)"
     *ngSwitchCase="'month'"
     [activeDate]="_activeDate"
@@ -109,7 +109,7 @@
   >
   </mat-datetimepicker-month-view>
   <mat-datetimepicker-year-view
-    (_userSelection)="_userSelected()"
+    (_userSelection)="onCancel()"
     (selectedChange)="_monthSelected($event)"
     *ngSwitchCase="'year'"
     [activeDate]="_activeDate"
@@ -119,7 +119,7 @@
   >
   </mat-datetimepicker-year-view>
   <mat-datetimepicker-multi-year-view
-    (_userSelection)="_userSelected()"
+    (_userSelection)="onCancel()"
     (selectedChange)="_yearSelected($event)"
     *ngSwitchCase="'multi-year'"
     [activeDate]="_activeDate"
@@ -131,7 +131,7 @@
   >
   </mat-datetimepicker-multi-year-view>
   <mat-datetimepicker-clock
-    (_userSelection)="_userSelected()"
+    (_userSelection)="onCancel()"
     (activeDateChange)="_onActiveDateChange($event)"
     (selectedChange)="_timeSelected($event)"
     *ngSwitchDefault
@@ -144,4 +144,16 @@
     [twelvehour]="twelvehour"
   >
   </mat-datetimepicker-clock>
+  <div class="action-buttons">
+    <button class="cancel-button" mat-raised-button (click)="onCancel()">
+      {{cancelLabel}}</button
+    ><button
+      class="confirm-button"
+      mat-raised-button
+      color="primary"
+      (click)="onConfirm()"
+    >
+      {{confirmLabel}}
+    </button>
+  </div>
 </div>
