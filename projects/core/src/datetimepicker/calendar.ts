@@ -457,6 +457,7 @@ export class MatDatetimepickerCalendarComponent<D>
     } else {
       this._activeDate = this._adapter.addCalendarHours(this._activeDate, 12);
     }
+    this.selectedChange.emit(this._activeDate);
   }
 
   _yearClicked(): void {
