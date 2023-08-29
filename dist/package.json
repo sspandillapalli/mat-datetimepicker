@@ -8,8 +8,8 @@
     "./datetimepicker/datetimepicker-theme": {
       "sass": "datetimepicker/datetimepicker-theme.scss"
     },
-    "./core": "./core",
-    "./moment": "./moment"
+    "./core": "./dist/core",
+    "./moment": "./dist/moment"
   },
   "peerDependencies": {
     "@angular/cdk": "^14.0.4",
