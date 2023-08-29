@@ -1,0 +1,39 @@
+{
+  "name": "cus-mat-datetimepicker/core",
+  "version": "10.2.4",
+  "license": "UNLICENSED",
+  "repository": "https://github.com/kuhnroyal/mat-datetimepicker.git",
+  "author": "PL <kuhnroyal@gmail.com>, extended by PL <shivashankar0601@gmail.com>",
+  "exports": {
+    "./datetimepicker/datetimepicker-theme": {
+      "sass": "datetimepicker/datetimepicker-theme.scss"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/cus-mat-datetimepicker-core.mjs",
+      "es2020": "./fesm2020/cus-mat-datetimepicker-core.mjs",
+      "es2015": "./fesm2015/cus-mat-datetimepicker-core.mjs",
+      "node": "./fesm2015/cus-mat-datetimepicker-core.mjs",
+      "default": "./fesm2020/cus-mat-datetimepicker-core.mjs"
+    }
+  },
+  "peerDependencies": {
+    "@angular/cdk": "^14.0.4",
+    "@angular/common": "^14.0.5",
+    "@angular/core": "^14.0.5",
+    "@angular/material": "^14.0.4"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  },
+  "module": "fesm2015/cus-mat-datetimepicker-core.mjs",
+  "es2020": "fesm2020/cus-mat-datetimepicker-core.mjs",
+  "esm2020": "esm2020/cus-mat-datetimepicker-core.mjs",
+  "fesm2020": "fesm2020/cus-mat-datetimepicker-core.mjs",
+  "fesm2015": "fesm2015/cus-mat-datetimepicker-core.mjs",
+  "typings": "index.d.ts",
+  "sideEffects": false
+}

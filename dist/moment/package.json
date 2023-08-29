@@ -1,0 +1,38 @@
+{
+  "name": "cus-mat-datetimepicker/moment",
+  "version": "10.2.4",
+  "repository": "https://github.com/kuhnroyal/mat-datetimepicker.git",
+  "author": "PL <kuhnroyal@gmail.com>, extended by PL <shivashankar0601@gmail.com>",
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "@angular/cdk": "^14.0.4",
+    "@angular/common": "^14.0.5",
+    "@angular/core": "^14.0.5",
+    "@angular/material": "^14.0.4",
+    "@angular/material-moment-adapter": "^14.0.4",
+    "mat-datetimepicker/core": "^10.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  },
+  "module": "fesm2015/cus-mat-datetimepicker-moment.mjs",
+  "es2020": "fesm2020/cus-mat-datetimepicker-moment.mjs",
+  "esm2020": "esm2020/cus-mat-datetimepicker-moment.mjs",
+  "fesm2020": "fesm2020/cus-mat-datetimepicker-moment.mjs",
+  "fesm2015": "fesm2015/cus-mat-datetimepicker-moment.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/cus-mat-datetimepicker-moment.mjs",
+      "es2020": "./fesm2020/cus-mat-datetimepicker-moment.mjs",
+      "es2015": "./fesm2015/cus-mat-datetimepicker-moment.mjs",
+      "node": "./fesm2015/cus-mat-datetimepicker-moment.mjs",
+      "default": "./fesm2020/cus-mat-datetimepicker-moment.mjs"
+    }
+  },
+  "sideEffects": false
+}
