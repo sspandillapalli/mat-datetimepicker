@@ -89,8 +89,7 @@ export class MatDatetimepickerContentComponent<D> implements AfterContentInit {
       this.onSelectionConfirm(newValue);
       this.datetimepicker.close();
       this.changedDate = null;
-    } else if (val === null && this.changedDate === null)
-      this.datetimepicker.close();
+    } else if (val === null) this.datetimepicker.close();
   }
 
   /**

@@ -1,6 +1,6 @@
 {
   "name": "cus-mat-datetimepicker",
-  "version": "10.2.4",
+  "version": "10.2.5",
   "license": "UNLICENSED",
   "scripts": {
     "build": "npm run build:lib && ng build",
