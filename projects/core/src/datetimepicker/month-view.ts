@@ -37,7 +37,7 @@ export class MatDatetimepickerMonthViewComponent<D>
 {
   @Input() type: MatDatetimepickerType = 'date';
 
-  @Output() _userSelection = new EventEmitter<void>();
+  // @Output() _userSelection = new EventEmitter<void>();
   /** A function used to filter which dates are selectable. */
   @Input() dateFilter: (date: D) => boolean;
   /** Emits when a new date is selected. */
@@ -141,9 +141,6 @@ export class MatDatetimepickerMonthViewComponent<D>
         this._adapter.getMinute(this.activeDate)
       )
     );
-    if (this.type === 'date') {
-      this._userSelection.emit();
-    }
   }
 
   _calendarStateDone() {

@@ -356,6 +356,7 @@ export class MatDatetimepickerCalendarComponent<D>
 
   /** Handles date selection in the month view. */
   _dateSelected(date: D): void {
+    this._activeDate = date;
     if (this.type === 'date') {
       if (
         !this._adapter.sameDate(date, this.selected) ||
@@ -364,7 +365,6 @@ export class MatDatetimepickerCalendarComponent<D>
         this.selectedChange.emit(date);
       }
     } else {
-      this._activeDate = date;
       this.currentView = 'clock';
     }
   }

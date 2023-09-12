@@ -99,7 +99,6 @@
     </div>
   </div>
   <mat-datetimepicker-month-view
-    (_userSelection)="onCancel()"
     (selectedChange)="_dateSelected($event)"
     *ngSwitchCase="'month'"
     [activeDate]="_activeDate"
